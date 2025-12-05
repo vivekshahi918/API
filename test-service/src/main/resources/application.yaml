@@ -1,0 +1,13 @@
+server:
+  port: 8081 # Different port so it doesn't clash with Collector
+
+spring:
+  application:
+    name: test-service
+
+# Configure your library
+api:
+  tracker:
+    collector-url: http://localhost:8080/api/collector/log
+    service-name: test-service
+    rate-limit: 5 # Low limit to easily test "Rate Limit Hit"

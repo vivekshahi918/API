@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  # Primary DB (Logs)
+  mongo-logs:
+    image: mongo:latest
+    container_name: collector-mongo-logs
+    ports:
+      - "27017:27017"
+
+  # Secondary DB (Metadata/Users)
+  mongo-meta:
+    image: mongo:latest
+    container_name: collector-mongo-meta
+    ports:
+      - "27018:27017" # Maps internal 27017 to your machine's 27018

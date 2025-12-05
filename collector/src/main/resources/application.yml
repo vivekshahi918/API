@@ -1,0 +1,10 @@
+server:
+  port: 8080
+
+spring:
+  data:
+    mongodb:
+      primary:
+        uri: mongodb://localhost:27017/api_logs_db
+      secondary:
+        uri: mongodb://localhost:27018/api_metadata_db
